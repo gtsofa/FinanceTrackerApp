@@ -101,7 +101,6 @@ private struct ExchangeRateCard: View {
     }
     
     private func flagEmoji(for currencyCode: String) -> String {
-        // Map common currency codes to representative country flags (approximate)
         let map: [String: String] = [
             "USD": "🇺🇸", "GBP": "🇬🇧", "EUR": "🇪🇺", "CNY": "🇨🇳",
             "UGX": "🇺🇬", "TZS": "🇹🇿", "RWF": "🇷🇼", "ZAR": "🇿🇦"
