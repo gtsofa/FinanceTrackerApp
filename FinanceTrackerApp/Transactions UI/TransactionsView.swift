@@ -19,6 +19,8 @@ struct TransactionsView: View {
     ]
     
     var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 16) {
         HStack {
             Image(systemName: "person.fill")
                 .frame(width: 40, height: 40)
@@ -51,7 +53,11 @@ struct TransactionsView: View {
         Button(action: {}, label: {
             Text("Add Transaction")
         })
-        
+            }
+            .padding(.horizontal)
+            .padding(.top)
+        }
+        .safeAreaPadding([.top, .bottom])
     }
 }
 
