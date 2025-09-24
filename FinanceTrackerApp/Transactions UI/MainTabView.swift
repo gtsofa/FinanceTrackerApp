@@ -17,7 +17,7 @@ struct MainTabView: View {
                 TransactionsView()
             }
             .tabItem {
-                Image(systemName: "house.fill")
+                Image(systemName: "house")
                 Text("Home")
             }
             
@@ -25,16 +25,17 @@ struct MainTabView: View {
                 ExchangeRatesView()
             }
             .tabItem {
-                Image(systemName: "arrow.left.arrow.right")
-                Text("Exchange Rates")
+                Image(systemName: "arrow.up.arrow.down")
+                Text("Exchange Rate")
             }
             
             ProfileView()
                 .tabItem {
-                    Image(systemName: "dots.horizontal.fill")
+                    Image(systemName: "ellipsis")
                     Text("More")
                 }
         }
+        .tint(.green)
     }
 }
 
