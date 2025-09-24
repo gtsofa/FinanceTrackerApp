@@ -21,10 +21,12 @@ struct MainTabView: View {
                 Text("Home")
             }
             
-            ExchangeRatesView()
+            NavigationStack {
+                ExchangeRatesView()
+            }
             .tabItem {
-                Image(systemName: "arrow.up.square.fill")
-                Text("Exchange Rate")
+                Image(systemName: "arrow.left.arrow.right")
+                Text("Exchange Rates")
             }
             
             ProfileView()
