@@ -60,11 +60,26 @@ struct CurrentBalanceView: View {
         .padding()
         .frame(maxWidth: .infinity)
         .background(
-            LinearGradient(
-                colors: [Color.green.opacity(0.9), Color.green],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
+            ZStack {
+                LinearGradient(
+                    gradient: Gradient(colors: [
+                        Color(red: 0.06, green: 0.20, blue: 0.14),
+                        Color(red: 0.10, green: 0.35, blue: 0.24),
+                        Color(red: 0.13, green: 0.50, blue: 0.30)
+                    ]),
+                    startPoint: .bottomLeading,
+                    endPoint: .topTrailing
+                )
+                RadialGradient(
+                    gradient: Gradient(colors: [
+                        Color.white.opacity(0.12),
+                        Color.clear
+                    ]),
+                    center: .topTrailing,
+                    startRadius: 10,
+                    endRadius: 280
+                )
+            }
         )
         .cornerRadius(20)
         .shadow(color: Color.black.opacity(0.2), radius: 8, x: 0, y: 4)
