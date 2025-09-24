@@ -23,12 +23,14 @@ struct TransactionRow: View {
         HStack(spacing: 12) {
             Image(transaction.logo)
                 .resizable()
-                .scaledToFit()
+                .scaledToFill()
                 .frame(width: 40, height: 40)
-                .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+                .clipShape(Circle())
                 .padding(8)
-                .background(Color(.systemGray6))
-                .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+                .background(
+                    Circle()
+                        .fill(Color(.systemGray6))
+                )
             
             VStack(alignment: .leading, spacing: 4) {
                 Text(transaction.title)
