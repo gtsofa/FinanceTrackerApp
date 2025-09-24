@@ -50,9 +50,15 @@ struct TransactionsView: View {
             .padding(.horizontal)
         }
         
-        Button(action: {}, label: {
+        NavigationLink(destination: AddTransactionView()) {
             Text("Add Transaction")
-        })
+                .font(.title3).bold()
+                .foregroundColor(.white)
+                .frame(maxWidth: .infinity)
+                .frame(height: 60)
+                .background(Color.green)
+                .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+        }
             }
             .padding(.horizontal)
             .padding(.top)
