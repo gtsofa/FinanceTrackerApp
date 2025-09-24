@@ -35,7 +35,7 @@ struct TransactionRow: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text(transaction.title)
                     .font(.headline)
-                    .lineLimit(1)
+                    .lineLimit(2)
                 Text(transaction.date)
                     .font(.caption)
                     .foregroundColor(.secondary)
